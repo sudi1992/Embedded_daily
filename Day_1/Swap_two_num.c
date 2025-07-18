@@ -45,6 +45,7 @@ void swap_xor(int *a, int *b) {
         y = temp; \
     } while(0)
 
+#ifndef UNIT_TEST
 int main() {
     int x = 10, y = 20;
 
@@ -68,3 +69,4 @@ int main() {
 
     return 0;
 }
+#endif

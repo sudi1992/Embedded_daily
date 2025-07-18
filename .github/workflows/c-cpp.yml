@@ -29,7 +29,7 @@ jobs:
         make
     - name: Build and run gtest
       run: |
-        g++ -std=c++17 -Igoogletest/googletest/include -pthread Day_1/test_swap.c Day_1/Swap_two_num.c googletest/build/lib/libgtest.a -o Day_1/test_swap_runner
+        g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_1/test_swap.c Day_1/Swap_two_num.c googletest/build/lib/libgtest.a -o Day_1/test_swap_runner
         ./Day_1/test_swap_runner
     - name: Run the program
       run: |
