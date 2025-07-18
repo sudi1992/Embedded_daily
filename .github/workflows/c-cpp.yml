@@ -17,6 +17,20 @@ jobs:
       run: |
         cd Day_1
         make
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y build-essential cmake git
+    - name: Clone and build GoogleTest
+      run: |
+        git clone https://github.com/google/googletest.git
+        cd googletest
+        mkdir build
+        cd build
+        cmake ..
+        make
+    - name: Build and run gtest
+      run: |
+        g++ -std=c++11 -Igoogletest/googletest/include -pthread Day_1/test_swap.c googletest/build/lib/libgtest.a -o Day_1/test_swap_runner
+        ./Day_1/test_swap_runner
     - name: Run the program
       run: |
         cd Day_1
