@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include "swap_utils.h"
 
 // 1. Swap using a temporary variable
 void swap_temp(int *a, int *b) {

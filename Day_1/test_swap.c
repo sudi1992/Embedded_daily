@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 
-// Example function to test (to be replaced with your real functions)
-extern "C" void swap_xor(int *a, int *b);
+#include "swap_utils.h"
 
 TEST(SwapTest, BasicSwap) {
     int x = 5, y = 10;
