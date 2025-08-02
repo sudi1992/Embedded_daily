@@ -37,13 +37,9 @@ jobs:
         ./Swap_two_num
     - name: Build and run atoi tests
       run: |
-<<<<<<< HEAD
-        g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_2/test_atoi.cpp Day_1/atoi.cpp googletest/build/lib/libgtest.a -o Day_2/test_atoi_runner
-=======
         g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_2/test_atoi.cpp Day_2/atoi.cpp googletest/build/lib/libgtest.a -o Day_2/test_atoi_runner
->>>>>>> e5fc17b (Day 2: Implemented custom atoi function, header, and Google)
         ./Day_2/test_atoi_runner
     - name: Run the program
       run: |
-        cd Day_1
+        cd Day_2
         ./atoi 5
