@@ -39,6 +39,9 @@ jobs:
       run: |
         g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_2/test_atoi.cpp Day_2/atoi.cpp googletest/build/lib/libgtest.a -o Day_2/test_atoi_runner
         ./Day_2/test_atoi_runner
+    - name: Build atoi binary
+      run: |
+        g++ -g -o Day_2/atoi Day_2/atoi.cpp
     - name: Run the program
       env:
         ATIO_INPUT: "5"
