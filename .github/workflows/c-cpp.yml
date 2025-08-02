@@ -35,3 +35,11 @@ jobs:
       run: |
         cd Day_1
         ./Swap_two_num
+    - name: Build and run atoi tests
+      run: |
+        g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_2/test_atoi.cpp Day_1/atoi.cpp googletest/build/lib/libgtest.a -o Day_2/test_atoi_runner
+        ./Day_2/test_atoi_runner
+    - name: Run the program
+      run: |
+        cd Day_1
+        ./atoi 5
