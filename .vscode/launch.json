@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/sudi/Embedded_daily/Day_2",
-      "program": "/home/sudi/Embedded_daily/Day_2/build/Debug/outDebug",
+      "cwd": "/home/sudi/Embedded_daily",
+      "program": "/home/sudi/Embedded_daily/Day_2/atoi",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
