@@ -24,12 +24,14 @@ int libatoi(const std::string& str) {
 }
 
 #ifndef UNIT_TEST
-int main() {
-    std::string input;
-    std::cout << "Enter a number: ";
-    std::getline(std::cin, input);
-
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <number>" << std::endl;
+        return 1;
+    }
+    std::string input = argv[1];
     int number = libatoi(input);
     std::cout << "Converted number: " << number << std::endl;
+    return 0;
 }
 #endif
