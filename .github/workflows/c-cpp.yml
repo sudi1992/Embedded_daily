@@ -40,6 +40,8 @@ jobs:
         g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_2/test_atoi.cpp Day_2/atoi.cpp googletest/build/lib/libgtest.a -o Day_2/test_atoi_runner
         ./Day_2/test_atoi_runner
     - name: Run the program
+      env:
+        ATIO_INPUT: "5"
       run: |
         cd Day_2
-        ./atoi 5
+        ./atoi $ATIO_INPUT
