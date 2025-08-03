@@ -50,5 +50,5 @@ jobs:
         ./atoi $ATIO_INPUT
     - name: Build and run addtwonum
       run: |
-        g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_3/test_addtwonum.c Day_3/addtwonum.cpp googletest/build/lib/libgtest.a -o Day_3/test_addtwonum_runner
+        g++ -DUNIT_TEST -std=c++17 -Igoogletest/googletest/include -pthread Day_3/test_addtwonum.c Day_3/addtwonum.c googletest/build/lib/libgtest.a -o Day_3/test_addtwonum_runner
         ./Day_3/test_addtwonum_runner
