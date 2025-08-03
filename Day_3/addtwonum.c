@@ -5,6 +5,11 @@
  *     struct ListNode *next;
  * };
  */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "addtwonum_util.h"
+
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     struct ListNode dummy;
     struct ListNode* curr = &dummy;
